@@ -132,25 +132,27 @@ namespace KeyMouseAccessibilityTest
 
         private void keybindEnter(object sender, EventArgs e)
         {
-            //TextBox tb = sender as TextBox;
-            Panel p = sender as Panel;
-            p.BorderStyle = BorderStyle.FixedSingle;
-            p.BackColor = Color.LightBlue;
-            p.Controls[0].Select();
+            TextBox tb = sender as TextBox;
+            tb.BackColor = Color.LightBlue;
         }
 
         private void keybindLeave(object sender, EventArgs e)
         {
-            //TextBox tb = sender as TextBox;
-            Panel p = sender as Panel;
-            p.BorderStyle = BorderStyle.None;
-            p.BackColor = Form1.DefaultBackColor;
+            TextBox tb = sender as TextBox;
+            tb.BackColor = Color.White;
+
         }
 
-        private void kebindPress(object sender, KeyEventArgs e)
+        private void keybindPress(object sender, KeyEventArgs e)
         {
             TextBox tb = sender as TextBox;
+            if (e.KeyCode == Keys.Escape) 
+            { 
+                title.Select();
+                return;
+            }
             directionKeys[tb] = e.KeyCode;
+            tb.Text = e.KeyCode.ToString().ToUpper();
         }
     }
 }

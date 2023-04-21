@@ -43,26 +43,7 @@
             lRightClick = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            panel4 = new Panel();
-            panel5 = new Panel();
-            panel6 = new Panel();
-            panel7 = new Panel();
-            panel8 = new Panel();
-            panel9 = new Panel();
-            panel10 = new Panel();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            panel9.SuspendLayout();
-            panel10.SuspendLayout();
+            title = new Label();
             SuspendLayout();
             // 
             // timer1
@@ -74,104 +55,120 @@
             // lUpLeft
             // 
             lUpLeft.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lUpLeft.Location = new Point(8, 8);
+            lUpLeft.Location = new Point(16, 40);
             lUpLeft.Name = "lUpLeft";
             lUpLeft.ReadOnly = true;
             lUpLeft.Size = new Size(80, 26);
             lUpLeft.TabIndex = 0;
-            lUpLeft.TabStop = false;
             lUpLeft.Text = "KEY";
             lUpLeft.TextAlign = HorizontalAlignment.Center;
+            lUpLeft.Enter += keybindEnter;
+            lUpLeft.KeyDown += keybindPress;
+            lUpLeft.Leave += keybindLeave;
             // 
             // lUp
             // 
             lUp.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lUp.Location = new Point(8, 8);
+            lUp.Location = new Point(120, 40);
             lUp.Name = "lUp";
             lUp.ReadOnly = true;
             lUp.Size = new Size(80, 26);
             lUp.TabIndex = 1;
-            lUp.TabStop = false;
             lUp.Text = "KEY";
             lUp.TextAlign = HorizontalAlignment.Center;
+            lUp.Enter += keybindEnter;
+            lUp.KeyDown += keybindPress;
+            lUp.Leave += keybindLeave;
             // 
             // lUpRight
             // 
             lUpRight.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lUpRight.Location = new Point(8, 8);
+            lUpRight.Location = new Point(224, 40);
             lUpRight.Name = "lUpRight";
             lUpRight.ReadOnly = true;
             lUpRight.Size = new Size(80, 26);
             lUpRight.TabIndex = 2;
-            lUpRight.TabStop = false;
             lUpRight.Text = "KEY";
             lUpRight.TextAlign = HorizontalAlignment.Center;
+            lUpRight.Enter += keybindEnter;
+            lUpRight.KeyDown += keybindPress;
+            lUpRight.Leave += keybindLeave;
             // 
             // lRight
             // 
             lRight.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lRight.Location = new Point(8, 8);
+            lRight.Location = new Point(224, 88);
             lRight.Name = "lRight";
             lRight.ReadOnly = true;
             lRight.Size = new Size(80, 26);
             lRight.TabIndex = 4;
-            lRight.TabStop = false;
             lRight.Text = "KEY";
             lRight.TextAlign = HorizontalAlignment.Center;
+            lRight.Enter += keybindEnter;
+            lRight.KeyDown += keybindPress;
+            lRight.Leave += keybindLeave;
             // 
             // lDownRight
             // 
             lDownRight.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lDownRight.Location = new Point(8, 8);
+            lDownRight.Location = new Point(224, 136);
             lDownRight.Name = "lDownRight";
             lDownRight.ReadOnly = true;
             lDownRight.Size = new Size(80, 26);
             lDownRight.TabIndex = 7;
-            lDownRight.TabStop = false;
             lDownRight.Text = "KEY";
             lDownRight.TextAlign = HorizontalAlignment.Center;
+            lDownRight.Enter += keybindEnter;
+            lDownRight.KeyDown += keybindPress;
+            lDownRight.Leave += keybindLeave;
             // 
             // lDown
             // 
             lDown.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lDown.Location = new Point(8, 8);
+            lDown.Location = new Point(120, 136);
             lDown.Name = "lDown";
             lDown.ReadOnly = true;
             lDown.Size = new Size(80, 26);
             lDown.TabIndex = 6;
-            lDown.TabStop = false;
             lDown.Text = "KEY";
             lDown.TextAlign = HorizontalAlignment.Center;
+            lDown.Enter += keybindEnter;
+            lDown.KeyDown += keybindPress;
+            lDown.Leave += keybindLeave;
             // 
             // lDownLeft
             // 
             lDownLeft.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lDownLeft.Location = new Point(8, 8);
+            lDownLeft.Location = new Point(16, 136);
             lDownLeft.Name = "lDownLeft";
             lDownLeft.ReadOnly = true;
             lDownLeft.Size = new Size(80, 26);
             lDownLeft.TabIndex = 5;
-            lDownLeft.TabStop = false;
             lDownLeft.Text = "KEY";
             lDownLeft.TextAlign = HorizontalAlignment.Center;
+            lDownLeft.Enter += keybindEnter;
+            lDownLeft.KeyDown += keybindPress;
+            lDownLeft.Leave += keybindLeave;
             // 
             // lLeft
             // 
             lLeft.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lLeft.Location = new Point(8, 8);
+            lLeft.Location = new Point(16, 88);
             lLeft.Name = "lLeft";
             lLeft.ReadOnly = true;
             lLeft.Size = new Size(80, 26);
             lLeft.TabIndex = 3;
-            lLeft.TabStop = false;
             lLeft.Text = "KEY";
             lLeft.TextAlign = HorizontalAlignment.Center;
+            lLeft.Enter += keybindEnter;
+            lLeft.KeyDown += keybindPress;
+            lLeft.Leave += keybindLeave;
             // 
             // lMouseDir
             // 
             lMouseDir.Anchor = AnchorStyles.None;
             lMouseDir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lMouseDir.Location = new Point(120, 56);
+            lMouseDir.Location = new Point(120, 80);
             lMouseDir.Name = "lMouseDir";
             lMouseDir.Size = new Size(80, 40);
             lMouseDir.TabIndex = 8;
@@ -181,32 +178,36 @@
             // lLeftClick
             // 
             lLeftClick.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lLeftClick.Location = new Point(8, 8);
+            lLeftClick.Location = new Point(16, 192);
             lLeftClick.Name = "lLeftClick";
             lLeftClick.ReadOnly = true;
             lLeftClick.Size = new Size(80, 26);
-            lLeftClick.TabIndex = 9;
-            lLeftClick.TabStop = false;
+            lLeftClick.TabIndex = 8;
             lLeftClick.Text = "KEY";
             lLeftClick.TextAlign = HorizontalAlignment.Center;
+            lLeftClick.Enter += keybindEnter;
+            lLeftClick.KeyDown += keybindPress;
+            lLeftClick.Leave += keybindLeave;
             // 
             // lRightClick
             // 
             lRightClick.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lRightClick.Location = new Point(8, 8);
+            lRightClick.Location = new Point(16, 232);
             lRightClick.Name = "lRightClick";
             lRightClick.ReadOnly = true;
             lRightClick.Size = new Size(80, 26);
-            lRightClick.TabIndex = 10;
-            lRightClick.TabStop = false;
+            lRightClick.TabIndex = 9;
             lRightClick.Text = "KEY";
             lRightClick.TextAlign = HorizontalAlignment.Center;
+            lRightClick.Enter += keybindEnter;
+            lRightClick.KeyDown += keybindPress;
+            lRightClick.Leave += keybindLeave;
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.None;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(120, 168);
+            label2.Location = new Point(120, 192);
             label2.Name = "label2";
             label2.Size = new Size(184, 24);
             label2.TabIndex = 12;
@@ -217,148 +218,39 @@
             // 
             label1.Anchor = AnchorStyles.None;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(120, 208);
+            label1.Location = new Point(120, 232);
             label1.Name = "label1";
             label1.Size = new Size(184, 24);
             label1.TabIndex = 13;
             label1.Text = "Right Click";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // title
             // 
-            panel1.Anchor = AnchorStyles.None;
-            panel1.Controls.Add(lUpLeft);
-            panel1.Location = new Point(8, 8);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(96, 40);
-            panel1.TabIndex = 0;
-            panel1.TabStop = true;
-            panel1.Enter += keybindEnter;
-            panel1.Leave += keybindLeave;
-            // 
-            // panel2
-            // 
-            panel2.Anchor = AnchorStyles.None;
-            panel2.Controls.Add(lDownLeft);
-            panel2.Location = new Point(8, 104);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(96, 40);
-            panel2.TabIndex = 5;
-            panel2.TabStop = true;
-            panel2.Enter += keybindEnter;
-            panel2.Leave += keybindLeave;
-            // 
-            // panel3
-            // 
-            panel3.Anchor = AnchorStyles.None;
-            panel3.Controls.Add(lRight);
-            panel3.Location = new Point(216, 56);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(96, 40);
-            panel3.TabIndex = 4;
-            panel3.TabStop = true;
-            panel3.Enter += keybindEnter;
-            panel3.Leave += keybindLeave;
-            // 
-            // panel4
-            // 
-            panel4.Anchor = AnchorStyles.None;
-            panel4.Controls.Add(lUp);
-            panel4.Location = new Point(112, 8);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(96, 40);
-            panel4.TabIndex = 1;
-            panel4.TabStop = true;
-            panel4.Enter += keybindEnter;
-            panel4.Leave += keybindLeave;
-            // 
-            // panel5
-            // 
-            panel5.Anchor = AnchorStyles.None;
-            panel5.Controls.Add(lUpRight);
-            panel5.Location = new Point(216, 8);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(96, 40);
-            panel5.TabIndex = 2;
-            panel5.TabStop = true;
-            panel5.Enter += keybindEnter;
-            panel5.Leave += keybindLeave;
-            // 
-            // panel6
-            // 
-            panel6.Anchor = AnchorStyles.None;
-            panel6.Controls.Add(lLeft);
-            panel6.Location = new Point(8, 56);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(96, 40);
-            panel6.TabIndex = 3;
-            panel6.TabStop = true;
-            panel6.Enter += keybindEnter;
-            panel6.Leave += keybindLeave;
-            // 
-            // panel7
-            // 
-            panel7.Anchor = AnchorStyles.None;
-            panel7.Controls.Add(lDownRight);
-            panel7.Location = new Point(216, 104);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(96, 40);
-            panel7.TabIndex = 7;
-            panel7.TabStop = true;
-            panel7.Enter += keybindEnter;
-            panel7.Leave += keybindLeave;
-            // 
-            // panel8
-            // 
-            panel8.Anchor = AnchorStyles.None;
-            panel8.Controls.Add(lLeftClick);
-            panel8.Location = new Point(8, 160);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(96, 40);
-            panel8.TabIndex = 8;
-            panel8.TabStop = true;
-            panel8.Enter += keybindEnter;
-            panel8.Leave += keybindLeave;
-            // 
-            // panel9
-            // 
-            panel9.Anchor = AnchorStyles.None;
-            panel9.Controls.Add(lDown);
-            panel9.Location = new Point(112, 104);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(96, 40);
-            panel9.TabIndex = 6;
-            panel9.TabStop = true;
-            panel9.Enter += keybindEnter;
-            panel9.Leave += keybindLeave;
-            // 
-            // panel10
-            // 
-            panel10.Anchor = AnchorStyles.None;
-            panel10.Controls.Add(lRightClick);
-            panel10.Location = new Point(8, 200);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(96, 40);
-            panel10.TabIndex = 9;
-            panel10.TabStop = true;
-            panel10.Enter += keybindEnter;
-            panel10.Leave += keybindLeave;
+            title.AutoSize = true;
+            title.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            title.Location = new Point(16, 8);
+            title.Name = "title";
+            title.Size = new Size(135, 21);
+            title.TabIndex = 14;
+            title.Text = "Key Configuration";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(321, 557);
-            Controls.Add(panel10);
-            Controls.Add(panel5);
-            Controls.Add(panel8);
-            Controls.Add(panel7);
-            Controls.Add(panel6);
-            Controls.Add(panel4);
-            Controls.Add(panel2);
-            Controls.Add(panel3);
-            Controls.Add(panel9);
-            Controls.Add(panel1);
+            Controls.Add(title);
+            Controls.Add(lRightClick);
+            Controls.Add(lLeftClick);
+            Controls.Add(lDown);
+            Controls.Add(lDownRight);
+            Controls.Add(lRight);
+            Controls.Add(lUpRight);
+            Controls.Add(lUp);
+            Controls.Add(lDownLeft);
+            Controls.Add(lLeft);
+            Controls.Add(lUpLeft);
             Controls.Add(label1);
             Controls.Add(label2);
             Controls.Add(lMouseDir);
@@ -369,27 +261,8 @@
             Text = "Keyboard Mouse Movement";
             KeyDown += Form1_KeyDown;
             KeyUp += Form1_KeyUp;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel9.ResumeLayout(false);
-            panel9.PerformLayout();
-            panel10.ResumeLayout(false);
-            panel10.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -407,15 +280,6 @@
         private TextBox lRightClick;
         private Label label2;
         private Label label1;
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
-        private Panel panel4;
-        private Panel panel5;
-        private Panel panel6;
-        private Panel panel7;
-        private Panel panel8;
-        private Panel panel9;
-        private Panel panel10;
+        private Label title;
     }
 }
