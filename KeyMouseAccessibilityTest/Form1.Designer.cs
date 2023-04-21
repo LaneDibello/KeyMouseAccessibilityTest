@@ -44,6 +44,7 @@
             label2 = new Label();
             label1 = new Label();
             title = new Label();
+            tbMouseSpeed = new TextBox();
             SuspendLayout();
             // 
             // timer1
@@ -235,11 +236,24 @@
             title.TabIndex = 14;
             title.Text = "Key Configuration";
             // 
+            // tbMouseSpeed
+            // 
+            tbMouseSpeed.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbMouseSpeed.Location = new Point(16, 272);
+            tbMouseSpeed.Name = "tbMouseSpeed";
+            tbMouseSpeed.ReadOnly = false;
+            tbMouseSpeed.Size = new Size(80, 26);
+            tbMouseSpeed.TabIndex = 15;
+            tbMouseSpeed.Text = "2";
+            tbMouseSpeed.TextAlign = HorizontalAlignment.Center;
+            tbMouseSpeed.TextChanged += tbMouseSpeed_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(321, 557);
+            Controls.Add(tbMouseSpeed);
             Controls.Add(title);
             Controls.Add(lRightClick);
             Controls.Add(lLeftClick);
@@ -281,5 +295,6 @@
         private Label label2;
         private Label label1;
         private Label title;
+        private TextBox tbMouseSpeed;
     }
 }

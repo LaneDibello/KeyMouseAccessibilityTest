@@ -46,6 +46,8 @@ namespace KeyMouseAccessibilityTest
                 dK.Key.Text = dK.Value.ToString().ToUpper();
             }
 
+            tbMouseSpeed.Text = Convert.ToString(mouse.mouseSpeed);
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -146,13 +148,18 @@ namespace KeyMouseAccessibilityTest
         private void keybindPress(object sender, KeyEventArgs e)
         {
             TextBox tb = sender as TextBox;
-            if (e.KeyCode == Keys.Escape) 
-            { 
+            if (e.KeyCode == Keys.Escape)
+            {
                 title.Select();
                 return;
             }
             directionKeys[tb] = e.KeyCode;
             tb.Text = e.KeyCode.ToString().ToUpper();
+        }
+
+        private void tbMouseSpeed_TextChanged(object sender, EventArgs e)
+        {
+            mouse.mouseSpeed = Convert.ToInt32((sender as TextBox).Text);
         }
     }
 }
