@@ -1,3 +1,4 @@
+using Microsoft.Win32;
 using System.Runtime.InteropServices;
 
 namespace KeyMouseAccessibilityTest
@@ -131,14 +132,19 @@ namespace KeyMouseAccessibilityTest
 
         private void keybindEnter(object sender, EventArgs e)
         {
-            TextBox tb = sender as TextBox;
-            tb.Text = "";
+            //TextBox tb = sender as TextBox;
+            Panel p = sender as Panel;
+            p.BorderStyle = BorderStyle.FixedSingle;
+            p.BackColor = Color.LightBlue;
+            p.Controls[0].Select();
         }
 
         private void keybindLeave(object sender, EventArgs e)
         {
-            TextBox tb = sender as TextBox;
-            tb.Text = directionKeys[tb].ToString().ToUpper();
+            //TextBox tb = sender as TextBox;
+            Panel p = sender as Panel;
+            p.BorderStyle = BorderStyle.None;
+            p.BackColor = Form1.DefaultBackColor;
         }
 
         private void kebindPress(object sender, KeyEventArgs e)
