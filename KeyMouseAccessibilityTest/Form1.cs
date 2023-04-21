@@ -48,6 +48,13 @@ namespace KeyMouseAccessibilityTest
 
             tbMouseSpeed.Text = Convert.ToString(mouse.mouseSpeed);
 
+            title.Select();
+
+            foreach (var tb in Controls.OfType<TextBox>())
+            {
+                tt.SetToolTip(tb, $"{tb.AccessibleName}: {tb.AccessibleDescription}");
+            }
+
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -106,7 +113,7 @@ namespace KeyMouseAccessibilityTest
                         mouse.adjMovAtomic(dirBitFlags.LEFT, false);
                         break;
                     case "lLeftClick":
-                        MouseOperations.LeftDown();
+                        MouseOperations.LeftUp();
                         break;
                     case "lRight":
                         mouse.adjMovAtomic(dirBitFlags.RIGHT, false);
@@ -159,7 +166,15 @@ namespace KeyMouseAccessibilityTest
 
         private void tbMouseSpeed_TextChanged(object sender, EventArgs e)
         {
+            TextBox tb = sender as TextBox;
+            if (tb.Text == "") tb.Text = "0";
             mouse.mouseSpeed = Convert.ToInt32((sender as TextBox).Text);
         }
+
+        private void tbMouseSpeed_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape) title.Select();
+        }
+
     }
 }
