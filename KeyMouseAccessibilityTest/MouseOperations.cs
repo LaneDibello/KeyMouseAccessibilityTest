@@ -29,7 +29,7 @@ namespace KeyMouseAccessibilityTest
         private const int MOUSE_EVENT_ABSOLUTE = 0x8000;
         #endregion
 
-        public int mouseSpeed = 2; //Mouse speed in arbitrary speed units
+        public int mouseSpeed = 10; //Mouse speed in arbitrary speed units
         public double x_dir = 0; //X component of the mouse movemetn vector
         public double y_dir = 0; //Y component of the mouse movement vector
         public dirBitFlags curr_mov; //Current Movement diretcions
@@ -43,6 +43,17 @@ namespace KeyMouseAccessibilityTest
         public static void LeftUp()
         {
             mouse_event(MOUSE_EVENT_LEFTUP, Cursor.Position.X, Cursor.Position.Y, 0, 0);
+        }
+
+        // Right clicks the mouse
+        public static void RightDown()
+        {
+            mouse_event(MOUSE_EVENT_RIGHTDOWN, Cursor.Position.X, Cursor.Position.Y, 0, 0);
+        }
+
+        public static void RightUp()
+        {
+            mouse_event(MOUSE_EVENT_RIGHTUP, Cursor.Position.X, Cursor.Position.Y, 0, 0);
         }
 
         public void adjMovAtomic(dirBitFlags f, bool set)

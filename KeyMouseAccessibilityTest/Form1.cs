@@ -78,6 +78,9 @@ namespace KeyMouseAccessibilityTest
                     case "lLeftClick":
                         MouseOperations.LeftDown();
                         break;
+                    case "lRightClick":
+                        MouseOperations.RightDown();
+                        break;
                     case "lRight":
                         mouse.adjMovAtomic(dirBitFlags.RIGHT, true);
                         break;
@@ -115,6 +118,9 @@ namespace KeyMouseAccessibilityTest
                     case "lLeftClick":
                         MouseOperations.LeftUp();
                         break;
+                    case "lRightClick":
+                        MouseOperations.RightUp();
+                        break;
                     case "lRight":
                         mouse.adjMovAtomic(dirBitFlags.RIGHT, false);
                         break;
@@ -148,7 +154,7 @@ namespace KeyMouseAccessibilityTest
         private void keybindLeave(object sender, EventArgs e)
         {
             TextBox tb = sender as TextBox;
-            tb.BackColor = Color.White;
+            tb.BackColor = DefaultBackColor;
 
         }
 

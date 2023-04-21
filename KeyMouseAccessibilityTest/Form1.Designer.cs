@@ -50,6 +50,12 @@
             tt = new ToolTip(components);
             textBox1 = new TextBox();
             label4 = new Label();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            thisToolStripMenuItem = new ToolStripMenuItem();
+            isToolStripMenuItem = new ToolStripMenuItem();
+            aToolStripMenuItem = new ToolStripMenuItem();
+            testToolStripMenuItem = new ToolStripMenuItem();
+            contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // timer1
@@ -329,6 +335,36 @@
             label4.Text = "Sample Text";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { thisToolStripMenuItem, isToolStripMenuItem, aToolStripMenuItem, testToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(96, 92);
+            // 
+            // thisToolStripMenuItem
+            // 
+            thisToolStripMenuItem.Name = "thisToolStripMenuItem";
+            thisToolStripMenuItem.Size = new Size(95, 22);
+            thisToolStripMenuItem.Text = "This";
+            // 
+            // isToolStripMenuItem
+            // 
+            isToolStripMenuItem.Name = "isToolStripMenuItem";
+            isToolStripMenuItem.Size = new Size(95, 22);
+            isToolStripMenuItem.Text = "Is";
+            // 
+            // aToolStripMenuItem
+            // 
+            aToolStripMenuItem.Name = "aToolStripMenuItem";
+            aToolStripMenuItem.Size = new Size(95, 22);
+            aToolStripMenuItem.Text = "A";
+            // 
+            // testToolStripMenuItem
+            // 
+            testToolStripMenuItem.Name = "testToolStripMenuItem";
+            testToolStripMenuItem.Size = new Size(95, 22);
+            testToolStripMenuItem.Text = "Test";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -359,6 +395,7 @@
             Text = "Keyboard Mouse Movement";
             KeyDown += Form1_KeyDown;
             KeyUp += Form1_KeyUp;
+            contextMenuStrip1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -384,5 +421,10 @@
         private ToolTip tt;
         private TextBox textBox1;
         private Label label4;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem thisToolStripMenuItem;
+        private ToolStripMenuItem isToolStripMenuItem;
+        private ToolStripMenuItem aToolStripMenuItem;
+        private ToolStripMenuItem testToolStripMenuItem;
     }
 }
