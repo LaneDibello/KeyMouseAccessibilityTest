@@ -60,29 +60,4 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>Here's a bunch of fun selectedable text!!!
-
-Wee wooo wowee
-
-lalalalalala
-
-Here's an excerpt from Vampire the masquerade:
-
-You’re dancing to a relentless techno beat in the press
-of warm, sweaty bodies. You’re in the attic of a squat
-house, walls covered in graffiti, the bare concrete floor
-stained with mysterious liquids. You’re drunk and high,
-coming down from the euphoria of becoming part of the
-writhing crowd.
-A woman brushes past you, her hand cold on your
-shoulder. You watch her as she presses between people and
-slips behind the DJ’s table. She doesn’t look that old, dressed
-like any of the bleary junkies grinding their bodies against
-you – at least, not until she notices you watching her. She
-smiles, and in that second, she seems to hold knowledge be-
-yond anything that could be conceived on this dance floor.
-
-</value>
-  </data>
 </root>
