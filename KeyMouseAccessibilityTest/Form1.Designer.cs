@@ -222,7 +222,7 @@
             lLeftClick.Name = "lLeftClick";
             lLeftClick.ReadOnly = true;
             lLeftClick.Size = new Size(80, 26);
-            lLeftClick.TabIndex = 8;
+            lLeftClick.TabIndex = 9;
             lLeftClick.Text = "KEY";
             lLeftClick.TextAlign = HorizontalAlignment.Center;
             lLeftClick.Enter += keybindEnter;
@@ -291,7 +291,7 @@
             tbMouseSpeed.Location = new Point(16, 272);
             tbMouseSpeed.Name = "tbMouseSpeed";
             tbMouseSpeed.Size = new Size(80, 26);
-            tbMouseSpeed.TabIndex = 15;
+            tbMouseSpeed.TabIndex = 11;
             tbMouseSpeed.Text = "2";
             tbMouseSpeed.TextAlign = HorizontalAlignment.Center;
             tbMouseSpeed.TextChanged += tbMouseSpeed_TextChanged;
